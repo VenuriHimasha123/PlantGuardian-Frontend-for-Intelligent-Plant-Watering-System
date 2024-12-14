@@ -14,14 +14,15 @@ This project could not have been completed without the collaboration of the foll
 - **Sanka**
 - **Dinuka**
 - **Dilum piumantha**
-- **Venuri Himasha Hendavitharana** (Myself)
+- **Venuri Hendavitharana** (Myself)
 
 The team worked together to ensure the success of this project, and I am truly thankful for the collaboration throughout the process.Thank you for all your hard work and dedication. The success of this project is a direct result of our team collaboration and individual contributions.
 
-##**frontend developing**
-- **Behan Ravishka** -
-- **Venuri Himasha Hendavitharana** (Myself)
-  
+## Frontend Development
+- **Venuri Hendavitharana** (Myself)
+- **Behan Ravishka**
+
+
 ## Project Development
 The project uses a combination of Arduino sensors and a web-based frontend to monitor and automate plant care. The frontend was developed by **Behan Ravishka** and myself. We used the following technologies to build the system:
 
@@ -50,7 +51,10 @@ The project uses a combination of Arduino sensors and a web-based frontend to mo
 - **Additional Sensors**: Future versions may include additional environmental sensors, such as light or pH sensors, to enhance plant care.
 - **Advanced Analytics**: Integration of machine learning algorithms for predictive analytics based on environmental data.
 
-
+### Technologies Breakdown:
+- **HTML**: 60% ![#FF5733](https://placehold.it/15/FF5733/000000?text=+)
+- **CSS**: 30% ![#33FF57](https://placehold.it/15/33FF57/000000?text=+)
+- **JavaScript**: 10% ![#3357FF](https://placehold.it/15/3357FF/000000?text=+)
 
 
 ## License:

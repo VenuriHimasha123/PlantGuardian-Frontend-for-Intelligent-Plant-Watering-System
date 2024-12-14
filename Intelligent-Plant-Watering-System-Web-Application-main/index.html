@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantGuardian</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url(images/plant.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .footer {
+            width: 100%;
+            /* Ensure it takes the full width */
+            padding: 24px;
+            /* Increased padding for more height */
+            margin-top: 32px;
+            /* Space above footer */
+            font-size: 1.25rem;
+            /* Increased font size for better readability */
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 28px;
+                /* Slightly larger padding for smaller screens */
+                font-size: 1.1rem;
+                /* Slightly smaller font size for mobile */
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav id="navbar"
+        class="navbar fixed top-0 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-75 shadow-lg z-50 curvy">
+        <div class="container mx-auto flex justify-between items-center py-4 flex-wrap">
+            <h1 class="text-2xl font-bold ml-2">PlantGuardian</h1>
+            <div class="flex items-center mr-2">
+                <button id="hamburger" class="block lg:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <div id="menu" class="hidden lg:flex space-x-4">
+                    <a href="dashboard.html" class="button">Dashboard</a>
+                    <a href="how-it-works.html" class="button">How It Works</a>
+                    <a href="#features" class="button">Features</a>
+                    <a href="#about" class="button">About Us</a>
+                    <a href="#services" class="button">Services</a>
+                    <a href="#blog" class="button">Blog</a>
+                    <a href="#contact" class="button">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-white shadow-lg fixed top-16 left-0 w-full z-40 bg-opacity-80">
+        <div class="container mx-auto py-4">
+            <a href="dashboard.html" class="block text-green-500 px-4 py-2 hover:bg-gray-200">Dashboard</a>
+            <a href="how-it-works.html" class="block text-yellow-500 px-4 py-2 hover:bg-gray-200">How It Works</a>
+            <a href="#features" class="block text-blue-500 px-4 py-2 hover:bg-gray-200">Features</a>
+            <a href="#about" class="block text-blue-500 px-4 py-2 hover:bg-gray-200">About Us</a>
+            <a href="#services" class="block text-blue-500 px-4 py-2 hover:bg-gray-200">Services</a>
+            <a href="#blog" class="block text-blue-500 px-4 py-2 hover:bg-gray-200">Blog</a>
+            <a href="#contact" class="block text-blue-500 px-4 py-2 hover:bg-gray-200">Contact</a>
+        </div>
+    </div>
+
+    <header style="background-image: url(images/background.jpeg);"
+        class="hero h-screen flex items-center justify-center text-white text-center bg-gradient-to-r from-green-500 to-green-700 ">
+        <div class="absolute inset-0 h-screen bg-black opacity-40"></div>
+        <div class="relative z-10">
+            <h1 class="text-5xl font-bold">Welcome to Intelligent Plant Watering System</h1>
+            <p class="mt-4 text-lg">Effortless Plant Care at Your Fingertips</p>
+            <a href="dashboard.html"
+                class="mt-6 inline-block bg-white text-green-500 px-6 py-2 rounded-full font-semibold hover:bg-gray-200">Get
+                Started</a>
+        </div>
+    </header>
+
+    <div style="background-color: rgba(42, 95, 68, 0.6);" class="container mx-auto mt-8 mb-8 px-4 py-4 rounded-lg">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+            <h2 class="text-2xl font-bold">Overview</h2>
+            <p class="mt-2">
+                Our Intelligent Plant Watering System is designed to help farmers and plant enthusiasts effectively
+                manage their watering needs using advanced sensors and real-time data tracking.
+            </p>
+            <h3 class="text-xl font-bold mt-4">Features</h3>
+            <ul class="list-disc list-inside mt-2">
+                <li>Real-time monitoring of soil moisture, temperature, and humidity</li>
+                <li>Visual alerts for low moisture conditions</li>
+                <li>Historical data tracking for better decision-making</li>
+                <li>Generate and download reports for analysis</li>
+            </ul>
+        </div>
+
+        <div class="bg-white shadow-lg rounded-lg p-6 mt-6">
+            <h3 class="text-xl font-bold">How It Works</h3>
+            <p class="mt-2">
+                Our system utilizes advanced sensor technology to keep track of your plants' needs.
+                Here's a simple step-by-step guide to set it up:
+            </p>
+            <ol class="list-decimal list-inside mt-2">
+                <li>Install the sensors in your plant's soil.</li>
+                <li>Connect the sensors to the mobile app.</li>
+                <li>Set your watering schedule and preferences.</li>
+                <li>Get real-time updates and alerts directly to your phone.</li>
+            </ol>
+            <a href="how-it-works.html" class="mt-4 text-blue-500 hover:underline">Learn More</a>
+        </div>
+
+        <div id="features" class="container mx-auto my-10 px-4 mb-4 py-4">
+            <h2 class="text-5xl font-bold text-white text-center mb-8">Innovative Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Predictive Irrigation Feature -->
+                <div class="feature-card bg-white shadow-md rounded-lg p-6">
+                    <div class="icon mb-4 text-green-500">
+                        <i class="fas fa-water text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Predictive Irrigation</h3>
+                    <p class="text-gray-700">Analyze weather data and soil trends to recommend optimal watering
+                        schedules.</p>
+                </div>
+
+                <!-- NPK Sensor Feature -->
+                <div class="feature-card bg-white shadow-md rounded-lg p-6">
+                    <div class="icon mb-4 text-blue-500">
+                        <i class="fas fa-flask text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">NPK Sensor Integration</h3>
+                    <p class="text-gray-700">Monitor Nitrogen, Phosphorus, and Potassium levels for healthier soil and
+                        crops.</p>
+                </div>
+
+                <!-- Temperature Sensor Feature -->
+                <div class="feature-card bg-white shadow-md rounded-lg p-6">
+                    <div class="icon mb-4 text-red-500">
+                        <i class="fas fa-thermometer-half text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Temperature Monitoring</h3>
+                    <p class="text-gray-700">Track ambient temperature to maintain optimal growing conditions for your
+                        plants.</p>
+                </div>
+
+                <!-- Soil Moisture Content -->
+                <div class="feature-card bg-white shadow-md rounded-lg p-6">
+                    <div class="icon mb-4 text-green-600">
+                        <i class="fas fa-seedling text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Soil Moisture Monitoring</h3>
+                    <p class="text-gray-700">Real-time updates on soil moisture to prevent over or under-watering.</p>
+                </div>
+
+                <!-- Scalability -->
+                <div class="feature-card bg-white shadow-md rounded-lg p-6">
+                    <div class="icon mb-4 text-yellow-500">
+                        <i class="fas fa-expand text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Scalability</h3>
+                    <p class="text-gray-700">Easily expand the system with additional sensors for larger plantations.
+                    </p>
+                </div>
+
+                <!-- Web-based Monitoring -->
+                <div class="feature-card bg-white shadow-md rounded-lg p-6">
+                    <div class="icon mb-4 text-purple-500">
+                        <i class="fas fa-desktop text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Web-based Monitoring</h3>
+                    <p class="text-gray-700">Access NPK levels, moisture data, and irrigation records from anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- About Us Section -->
+    <!-- About Us Section -->
+<section id="about" class="bg-gray-200 py-12 px-6">
+    <div class="max-w-screen-lg mx-auto">
+        <!-- Heading -->
+        <div class="text-center mb-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-black">About Us</h2>
+        </div>
+
+        <div class="text-center mb-6">
+        <p class="text-base sm:text-lg text-black leading-relaxed max-w-3xl mx-auto">
+            At Smart Farming Systems, we combine innovation with simplicity to address challenges in modern agriculture.
+            Our mission is to help farmers manage irrigation and fertilization with real-time insights, predictive
+            schedules,
+            and data-driven solutions. Explore how we revolutionize farming with our cutting-edge technology!
+        </p>
+        </div>
+        <!-- Example Work Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <!-- Example Work 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="images/smartwatering1.jpg" alt="Smart Watering System" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold">Smart Watering System</h3>
+                    <p class="text-sm text-gray-600">Automated irrigation in action using soil moisture sensors.</p>
+                </div>
+            </div>
+            <!-- Example Work 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="images/npk.jpg" alt="Real-Time NPK Monitoring" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold">Real-Time NPK Monitoring</h3>
+                    <p class="text-sm text-gray-600">Tracking soil nutrients for precise fertilization.</p>
+                </div>
+            </div>
+            <!-- Example Work 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="images/dashboard.jpg" alt="Web Dashboard" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold">Web Dashboard</h3>
+                    <p class="text-sm text-gray-600">Monitor and analyze data anytime, anywhere.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Learn More Button -->
+        <a href="#services" class="bg-gray-500 text-white px-6 py-2 rounded-full shadow-md hover:bg-green-600">
+            Learn More
+        </a>
+       
+    </section>
+
+    <section style="background-image: url(images/walpaper1.jpg);" id="services" class="bg-gray-100 py-10 opacity-80">
+        <div class="container mx-auto px-5 flex flex-col lg:flex-row items-center">
+            <!-- Heading -->
+            <h2 class="text-6xl font-bold text-center lg:text-right lg:mr-10 lg:w-1/3 mb-6 lg:mb-0">
+                Our Services
+            </h2>
+
+            <!-- Description -->
+            <div class="lg:w-2/3 text-xl text-black text-center">
+                <p class="mb-4 font-bold">
+                    &#10687; We specialize in providing innovative agricultural solutions to help farmers achieve
+                    sustainable and
+                    efficient farming.
+                </p>
+                <ul class="list-disc pl-5 lg:pl-0 lg:list-inside lg:space-y-3">
+                    <li>Automated watering systems powered by real-time soil moisture data.</li>
+                    <li>Integrated NPK nutrient monitoring for soil health optimization.</li>
+                    <li>Web-based dashboard for tracking irrigation and fertilization.</li>
+                    <li>Predictive analytics for better water and nutrient management.</li>
+                    <li>Scalable solutions for farms of any size.</li>
+                </ul>
+
+                <!-- Get in Touch Button -->
+                <div class="mt-6 text-center lg:text-right">
+                    <a href="#contact"
+                        class="bg-gray-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <div style="background-image: url(images/greenplant.jpg); background-repeat: no-repeat;background-attachment: fixed;background-size: cover;"
+        id="blog" class="container mx-auto my-16 px-4 py-8 rounded-lg opacity-75">
+        <h1 class="text-5xl font-bold text-white text-center mb-12">Our Blogs</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Blog 1 -->
+            <div
+                class="blog-card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="images/1.jpg" alt="Automated Watering" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-4">The Benefits of Automated Watering</h3>
+                    <p class="text-gray-600">Discover how smart irrigation systems optimize water usage, reduce waste,
+                        and enhance crop yield...</p>
+                    <a href="https://example.com/blog/automated-watering"
+                        class="text-blue-500 font-medium mt-4 inline-block hover:underline">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog 2 -->
+            <div
+                class="blog-card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="images/2.jpg" alt="NPK Monitoring" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-4">Importance of NPK Monitoring</h3>
+                    <p class="text-gray-600">Learn why real-time monitoring of nitrogen, phosphorus, and potassium
+                        levels is crucial...</p>
+                    <a href="https://example.com/blog/npk-monitoring"
+                        class="text-blue-500 font-medium mt-4 inline-block hover:underline">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog 3 -->
+            <div
+                class="blog-card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="images/3.jpg" alt="Predictive Irrigation" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-4">Predictive Irrigation: The Future of Farming</h3>
+                    <p class="text-gray-600">Explore how predictive algorithms based on weather data and historical
+                        trends can revolutionize water...</p>
+                    <a href="https://example.com/blog/predictive-irrigation"
+                        class="text-blue-500 font-medium mt-4 inline-block hover:underline">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog 4 -->
+            <div
+                class="blog-card bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                <img src="images/5.jpg" alt="Technology in Agriculture" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-4">Integrating Technology in Agriculture</h3>
+                    <p class="text-gray-600">Uncover the advantages of combining advanced sensors and web-based
+                        dashboards to empower farmers...</p>
+                    <a href="https://example.com/blog/tech-in-agriculture"
+                        class="text-blue-500 font-medium mt-4 inline-block hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact us Section -->
+    <section style="background-color: rgb(196, 216, 200, 0.5);" id="contact"
+        class="bg-white py-10 ml-10 mr-10 rounded-lg">
+        <div class="container mx-auto px-5">
+            <!-- Heading -->
+            <h2 class="text-5xl text-black font-bold text-center mb-6">Contact Us</h2>
+
+            <!-- Description -->
+            <p class="text-lg text-black text-center mb-8">
+                Contact Us for Any Agriculture Technology Query<br>
+                Have questions about how our cutting-edge agricultural technology solutions can help optimize your
+                farming operations?
+                Reach out to us, and our team will be happy to assist you with any inquiries regarding precision
+                farming,
+                smart irrigation, or crop monitoring systems.
+            </p>
+
+            <!-- Contact Form -->
+            <form style="background-color: rgb(118, 177, 169);" id="contactForm"
+                class="max-w-lg mx-auto bg-gray-100 p-6 rounded-lg shadow-lg">
+                <!-- Your Name -->
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-bold mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded"
+                        placeholder="Enter your name" required>
+                </div>
+
+                <!-- Your Email -->
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-bold mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded"
+                        placeholder="Enter your email" required>
+                </div>
+
+                <!-- Subject -->
+                <div class="mb-4">
+                    <label for="subject" class="block text-gray-700 font-bold mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border rounded"
+                        placeholder="Enter the subject" required>
+                </div>
+
+                <!-- Message -->
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border rounded"
+                        placeholder="Write your message" required></textarea>
+                </div>
+
+                <!-- Send Message Button -->
+                <button type="submit"  style="align-items: center;"
+                    class="w-full bg-gray-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" >
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="hidden fixed bottom-5 right-5 bg-gray-500 text-white px-4 py-2 rounded-full shadow-md hover:bg-green-600">
+        ↑ Top
+    </button>
+
+    <!-- footer -->
+    <footer class="footer bg-green-800 text-white text-center py-6 mt-8">
+        <p class="text-lg">&copy; 2024 Intelligent Plant Watering. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Back to Top Button Logic
+        const backToTopButton = document.getElementById("backToTop");
+
+        // Show or hide the button when scrolling
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.classList.remove("hidden");
+            } else {
+                backToTopButton.classList.add("hidden");
+            }
+        };
+
+        // Scroll to the top when the button is clicked
+        backToTopButton.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        // Form submission event
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent actual form submission
+
+            // Show alert
+            alert(
+                "Thank you for reaching out. We are already processing your request and will contact you shortly with a response or additional information.\nYour patience is greatly appreciated."
+            );
+
+            // Redirect to home
+            window.location.href = "#home"; // Adjust to your home section or page link
+        });
+
+
+    </script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

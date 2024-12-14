@@ -1,0 +1,326 @@
+/* index */
+
+.hero {
+    background-image: url(images/background.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    transition: top 0.3s;
+    width: 90%;
+    height: 12%;
+}
+
+/* Curvy edges on the navbar */
+.curvy {
+    border-radius: 0 0 20px 20px;
+    /* Adjust the curve radius as needed */
+}
+
+/* Hides the navbar on scroll down */
+.hidden {
+    top: -100px;
+    /* Height of the navbar should be adjusted based on actual size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%;
+        /* Increase useable width on smaller screens */
+    }
+}
+
+/* Base styles for navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hamburger menu styles */
+#hamburger {
+    display: none;
+    /* Default hidden for larger screens */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #hamburger {
+        display: block;
+        /* Show hamburger icon on smaller screens */
+    }
+
+    #menu {
+        display: none;
+        /* Hide the default navbar links */
+    }
+
+    #mobile-menu {
+        display: none;
+        /* Hide the mobile menu by default */
+    }
+
+    .navbar {
+        width: 90%;
+        /* Increase usable width on smaller screens */
+    }
+
+    /* Show the mobile menu when active */
+    #mobile-menu.active {
+        display: block;
+        /* Show the mobile menu when activated */
+    }
+}
+
+
+/* Ensure the mobile menu is styled to be visible below the navbar */
+#mobile-menu {
+    top: 56px;
+    /* Adjust this value based on your navbar height */
+}
+
+/* dashboard */
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.healthy {
+    color: green;
+}
+
+.low-moisture {
+    color: red;
+}
+
+/* how-it-works */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding-top: 4rem;
+    background: #669b66;
+    color: rgb(253, 249, 249);
+}
+
+header h1 {
+    font-size: 5rem;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 300px;
+    /* Set your desired width */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+    transform: scale(1.05);
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-container:hover .overlay {
+    opacity: 1;
+}
+
+.play-button {
+    font-size: 50px;
+    color: white;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.video-container:hover .play-button {
+    transform: scale(1.2);
+}
+
+/* features */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: rgb(173, 243, 156);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons */
+.icon {
+    font-size: 40px;
+    color: #4CAF50;
+    /* Change color to match your theme */
+    margin-bottom: 15px;
+}
+
+/* Headings */
+h2 {
+    color: #333;
+}
+
+h3 {
+    color: #222;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns for large screens */
+    }
+}
+
+.blog-card {
+    border: 2px solid #f3f4f6;
+    /* Light border */
+    cursor: pointer;
+    /* Pointer on hover */
+}
+
+.blog-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow effect */
+    border-color: #d1d5db;
+    /* Darker border on hover */
+}
+
+.blog-card img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.blog-card:hover img {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+}
+
+/* buttons */
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    /* Adjusts size for a rounded square */
+    border-radius: 12px;
+    /* Creates rounded square corners */
+    background-color: #053627;
+    /* Default button color */
+    color: rgb(35, 241, 28);
+    /* Button text color */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    /* Smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Light shadow */
+}
+
+.button:hover {
+    background-color: #0a5310;
+    /* Brighter color on hover */
+    transform: translateY(-3px) scale(1.05);
+    /* Moves button up slightly and scales */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow */
+}
+
+.button:active {
+    transform: translateY(0);
+    /* Resets position on click */
+    background-color: #5f7dcf;
+    /* Darker shade for active state */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Original shadow */
+}
+
+/* Base Button Styling */
+.button2 {
+    background-color:#33be09; /* Vibrant yellow color */
+    color: rgba(0, 0, 0, 0.842); /* Black text for contrast */
+    font-size: 1.2rem; /* Slightly larger text */
+    font-weight: bold;
+    padding: 10px 20px; /* Add padding for a comfortable click area */
+    border: none; /* Remove default borders */
+    border-radius: 8px; /* Rounded corners for a smooth look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.button2:hover {
+    background-color:  #6eda77; /* Lighter yellow on hover */
+    box-shadow: 0 8px 12px rgba(218, 228, 182, 0.842); /* Increase shadow for effect */
+    transform: translateY(-3px); /* Slight upward movement */
+}
+
+/* Click Effect */
+.button2:active {
+    background-color: #fcd476; /* Slightly darker yellow on click */
+    transform: translateY(2px); /* Slight downward movement */
+    box-shadow: 0 2px 4px rgba(218, 228, 182, 0.842); /* Reduced shadow */
+}
+
+

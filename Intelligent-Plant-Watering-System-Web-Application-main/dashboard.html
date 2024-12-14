@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantGuardian - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body  style="  background-image: linear-gradient(to right, rgb(195, 235, 103) , rgb(247, 247, 232));" class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav id="navbar"
+        class="navbar fixed top-0 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-75 shadow-lg z-50 curvy">
+        <div class="container mx-auto flex justify-between items-center py-4 flex-wrap">
+            <h1 class="text-2xl font-bold ml-2">PlantGuardian</h1>
+            <div class="flex items-center mr-2">
+                <button id="hamburger" class="block lg:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <div id="menu" class="hidden lg:flex space-x-4">
+                    <a href="index.html" class="button">Home</a>
+                    <a href="how-it-works.html" class="button">How It Works</a>
+                    <a href="index.html#features" class="button">Features</a>
+                    <a href="index.html#about" class="button">About Us</a>
+                    <a href="index.html#services" class="button">Services</a>
+                    <a href="index.html#blog" class="button">Blog</a>
+                    <a href="index.html#contact" class="button">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden bg-white shadow-lg fixed top-16 left-0 w-full z-40 bg-opacity-80">
+    <div class="container mx-auto py-4">
+        <a href="index.html" class="block text-green-500 px-4 py-2 hover:bg-gray-200">Home</a>
+        <a href="index.html#features" class="block text-blue-500 px-4 py-2 hover:bg-gray-200">Features</a>
+        <a href="how-it-works.html" class="block text-yellow-500 px-4 py-2 hover:bg-gray-200">How It Works</a>
+        <a href="#about" class="block text-blue-500 px-4 py-2 hover:bg-gray-200">About Us</a>
+        <a href="#services" class="block text-blue-500 px-4 py-2 hover:bg-gray-200">Services</a>
+        <a href="#blog" class="block text-blue-500 px-4 py-2 hover:bg-gray-200">Blog</a>
+        <a href="#contact" class="block text-blue-500 px-4 py-2 hover:bg-gray-200">Contact</a>
+    </div>
+</div>
+
+
+    <div class="container mx-auto mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Real-time Data Cards -->
+            <div class="card">
+                <h2 class="text-xl font-bold">Soil Moisture</h2>
+                <p id="soil-moisture" class="text-2xl healthy">45%</p>
+            </div>
+            <div class="card">
+                <h2 class="text-xl font-bold">Temperature</h2>
+                <p id="temperature" class="text-2xl">22°C</p>
+            </div>
+            <div class="card">
+                <h2 class="text-xl font-bold">Humidity</h2>
+                <p id="humidity" class="text-2xl">55%</p>
+            </div>
+        </div>
+
+        <div class="mt-12">
+            <h2 class="text-2xl font-bold text-center">Historical Data</h2>
+            <canvas style="background-color: rgb(241, 247, 159);" id="historicalDataChart" class="mt-4"></canvas>
+        </div>
+
+        <!-- Buttons for Reports -->
+        <div class="mt-8 text-center">
+            <button id="btn-generate-report" class="button2">Generate Report</button>
+            <button id="btn-download-report" class="button2">Download Report</button>
+        </div>
+    </div>
+
+    <footer class="bg-green-800 text-white text-center py-4 mt-8">
+        <p>&copy; 2024 Intelligent Plant Watering. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
